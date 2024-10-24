@@ -19,7 +19,7 @@ def is_valid_image(image_src, base_path):
     print(full_image_path)
     return os.path.isfile(full_image_path)
 
-def generate_homepage(folder_path='womens_team', output_file='index.html'):
+def generate_homepage(folder_path='mens_team', output_file='mens.html'):
     # Set to store unique links
     links = set()
 
