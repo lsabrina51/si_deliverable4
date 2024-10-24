@@ -1,0 +1,126 @@
+/*Basic link styling*/ 
+a{
+    color: black; 
+    text-decoration: none;
+    text-align:center;
+}
+
+nav {
+    background-color: lightblue;
+    width: 100%;
+}
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+nav ul {
+    list-style: none;  
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Hover Effects*/ 
+a:hover{
+    background-color: lightgreen;
+    font-size: larger;
+}
+
+#all-athletes li:hover{
+    background-color: lightgreen;
+    font-size: larger;
+    animation: enlarge 1s;
+    animation-fill-mode: forwards;
+}
+
+h1{
+    text-align: center; 
+    margin-bottom: 20px; 
+    background-color: lightblue; 
+    padding: 20px;
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+
+/*grid styling*/ 
+#all-athletes{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px 10px;
+    padding: 0;
+    justify-content:center; 
+}
+
+#all-athletes li{
+   margin: 0;
+   padding: 0;
+    border-style: solid;
+    background-color: lightblue;
+    
+}
+
+img{
+    max-height: 100px;
+}
+
+#all-athletes li a{
+    display: block;    
+}
+
+/*footer styling*/ 
+footer{
+    background-color: lightblue; 
+    align-content: center;
+    padding-top: 2em; 
+    padding-bottom: 2em; 
+    margin-top: 20px;
+}
+
+footer p, address{
+    margin-left: 20px; 
+}
+
+/*Animation*/ 
+@keyframes enlarge {
+    from{scale: 1;}
+    to{scale: 1.2; }
+}
+  
+  
+/*Dark Mode*/ 
+@media(prefers-color-scheme:dark){
+    body{
+        background-color: 	#212121; 
+        color: white;
+    }
+
+    h1{
+        background-color: darkblue;
+        border-color: white;
+    }
+
+    nav, footer{
+        background-color: darkblue;
+    }
+
+    nav ul li a, #all-athletes a, footer p, address, a{
+        color: white; 
+    }
+
+    #all-athletes li{
+        background-color: darkblue;
+    }
+
+    /*Hover Effects*/ 
+    a:hover{
+        background-color: darkviolet;
+        font-size: larger;
+    }
+
+    #all-athletes li:hover{
+        background-color: darkviolet;
+    }
+  
+}
