@@ -49,17 +49,17 @@ def gen_athlete_page(data, outfile):
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!-- Get your own FontAwesome ID -->
-       <script src="https://kit.fontawesome.com/YOUR_ID.js" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/542a7b699c.js" crossorigin="anonymous"></script>
 
 
-      <link rel = "stylesheet" href = "css/reset.css">
-      <link rel = "stylesheet" href = "css/style.css">
+      <link rel = "stylesheet" href = "../css/reset.css">
+      <link rel = "stylesheet" href = "../css/athlete_style.css">
       
 
       <title>{data["name"]}</title>
    </head>
    <body>
-   <a href = "#main">Skip to Main Content</a>
+   <a href = "#main" id = "skip">Skip to Main Content</a>
    <nav>
      <ul>
         <li><a href="index.html">Home Page</a></li>
@@ -74,7 +74,8 @@ def gen_athlete_page(data, outfile):
    </header>
    <main id = "main">
       <section id= "athlete-sr-table">
-         <h2>Athlete's Seasonal Records (SR) per Year</h2>
+         <h2><i class = "fa-solid fa-medal"></i> Athlete's Seasonal Records (SR) per Year</h2>
+         
             <table>
                   <thead>
                      <tr>
@@ -148,7 +149,7 @@ def gen_athlete_page(data, outfile):
                      Ann Arbor, MI 48103<br><br>
 
                      <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-                    Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/"><i class="fa-brands fa-instagram" aria-label="Instagram"></i>  </a> 
+                     <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a> 
 
 
                      </footer>

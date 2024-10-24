@@ -1,0 +1,182 @@
+/*Basic link styling*/ 
+a{
+    color: black; 
+}
+
+ /*Skip to main content styling*/ 
+#skip {
+    background-color: lightgrey;
+    padding: 10px;
+    text-decoration: none; 
+    display:block; 
+    text-align: center;
+    transition: color 300ms, background-color 300ms, transform 500ms cubic-bezier(.44, .23, .47, 1.27); 
+}
+
+/*Icon styling and animation*/ 
+.fa-solid.fa-medal{
+    color: black; 
+    animation-duration: 2s;
+    animation-name: color-change;
+    animation-direction: alternate;
+
+}
+@keyframes color-change{
+    0% {
+        translate: 150vw 0;
+        scale: 200% 1;
+         
+      }
+    100%{
+        translate: 0 0;
+        scale: 100% 1; 
+    }
+}
+
+/*Navigation bar styling*/ 
+nav {
+    background-color: lightblue;
+    width: 100%;
+}
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;  
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1{
+    text-align: center;
+    background-color: lightblue;
+    position: sticky; 
+    top: 0; 
+    padding: 10px;
+
+}
+
+h2{
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+img{
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    max-height: 75vh;
+}
+
+/*table styling for both tables*/ 
+#athlete-table thead, #athlete-sr-table thead{
+    position: sticky; 
+    top: 0; 
+    background-color: lightblue; 
+    padding: 10px; 
+}
+#athlete-sr-table table tbody tr td, .result-row td{
+    padding: 1vw;
+    margin-left: 20px;
+    margin-right: 10vw; 
+}
+#athlete-sr-table table {
+    width: 100vw;
+}
+/*makes sure alternating row has different colors*/ 
+#athlete-table tr:nth-child(even),#athlete-sr-table tr:nth-child(even)  {
+    background-color: lightgray;
+}
+/*highlights entire row when something it selected*/ 
+#athlete-table tr:hover, #athlete-sr-table tr:hover, 
+#athlete-table tr:nth-child(even):hover,
+#athlete-sr-table tr:nth-child(even):hover, 
+a:hover, #skip:hover{
+    background-color: lightgreen; 
+    font-size: larger;
+}
+
+/*footer styling*/ 
+footer{
+    background-color: lightblue; 
+    align-content: center;
+    padding-top: 2em; 
+    padding-bottom: 2em; 
+}
+
+footer p, address{
+    margin-left: 20px; 
+}
+
+/*Dark mode styling: inverts all color*/
+@media(prefers-color-scheme:dark){
+    /*inverts all colors*/
+    body{
+        background-color: 	#212121; 
+        color: white;
+    }
+
+    h1, h2, nav, footer{
+        background-color: black;
+        color: white; 
+        
+    }
+
+    #athlete-table tr:nth-child(even),#athlete-sr-table tr:nth-child(even)  {
+        background-color: #1e1414;
+    }
+
+    a{
+        color: white; 
+        text-decoration: none;
+    }
+
+    #skip{
+        background-color: darkblue;
+    }
+
+    #athlete-table thead, #athlete-sr-table thead{
+        background-color: black;
+    }
+
+    .fa-solid.fa-medal{
+        color: white; 
+    }
+
+    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
+    #athlete-table tr:nth-child(even):hover,
+    #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
+    background-color: rgb(85, 30, 109); 
+    font-size: larger;
+    }
+
+}
+
+/*Reduced motion styling*/ 
+@media (prefers-reduced-motion: reduce){
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
+    #athlete-table tr:nth-child(even):hover,
+    #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
+        transform: scale(1);
+    }
+
+    #skip{
+        transition: none !important; 
+    }
+
+    .fa-solid.fa-medal{
+        animation: none !important; 
+    }
+
+}
