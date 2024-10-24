@@ -18,7 +18,7 @@ def is_valid_image(image_src, base_path):
     full_image_path = image_src
     return os.path.isfile(full_image_path)
 
-def generate_homepage(folder_path='womens_team', output_file='womens.html'):
+def generate_homepage(folder_path='mens_team', output_file='mens.html'):
     # Set to store unique links
     links = set()
 
@@ -36,10 +36,10 @@ def generate_homepage(folder_path='womens_team', output_file='womens.html'):
                 mod_img_src = image_src.replace('../', '')
 
             if image_src and is_valid_image(mod_img_src, base_path = os.path.join(os.path.dirname(folder_path), mod_img_src)):
-                links.add(f'<li><img src="{image_src}" alt="{modified_string}" style="width:100px;height:auto;"><br><a href="{"womens_teams/" + filename}">{modified_string}</a></li>')
+                links.add(f'<li><img src="{image_src}" alt="" style="width:100px;height:auto;"><br><a href="{"womens_teams/" + filename}">{modified_string}</a></li>')
             else: 
                 default = os.path.join(os.path.dirname(folder_path), "/images/profiles/default_image.jpg")
-                links.add(f'<li><a href="{filename}"><img src="{".."+default}" alt="{modified_string}" style="width:100px;height:auto;">{modified_string}</a></li>')
+                links.add(f'<li><a href="{filename}"><img src="{".."+default}" alt="" style="width:100px;height:auto;">{modified_string}</a></li>')
 
      # Sort the links alphabetically
     sorted_links = sorted(links)
@@ -54,7 +54,7 @@ def generate_homepage(folder_path='womens_team', output_file='womens.html'):
      <script src="https://kit.fontawesome.com/542a7b699c.js" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "css/reset.css">
     <link rel = "stylesheet" href = "css/team_pages.css">
-    <title>Women's Team Homepage</title>
+    <title>Men's Team Homepage</title>
 </head>
 <body>
      <nav>
@@ -65,7 +65,7 @@ def generate_homepage(folder_path='womens_team', output_file='womens.html'):
         </ul>
     </nav>
 
-    <h1>Welcome to the Women's Team Homepage</h1>
+    <h1>Welcome to the Men's Team Homepage</h1>
     <ul id = "all-athletes">
         {}
     </ul>
