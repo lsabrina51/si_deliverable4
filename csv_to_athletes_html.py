@@ -167,7 +167,7 @@ def main():
    import glob
 
    # Define the folder path
-   folder_path = 'mens_team/'
+   folder_path = 'womens_team/'
    # Get all csv files in the folder
    csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
 
@@ -179,9 +179,11 @@ def main():
    for file in csv_file_names:
 
       # read data from file
-      athlete_data = process_athlete_data("mens_team/"+file)
+      athlete_data = process_athlete_data("womens_team/"+file)
+
+      file = file.replace(' ', '_')
       # using data to generate templated athlete page
-      gen_athlete_page(athlete_data, "mens_team/"+file.replace(".csv",".html"))
+      gen_athlete_page(athlete_data, "womens_team/"+file.replace(".csv",".html"))
 
       # read data from file
       # athlete_data2 = process_athlete_data(filename2)
