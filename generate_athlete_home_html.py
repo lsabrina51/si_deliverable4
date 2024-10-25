@@ -30,13 +30,17 @@ def generate_homepage(folder_path='mens_team', output_file='mens.html'):
             image_src = extract_image_from_html(file_path)
             # Create a link with image if an image is found
             modified_string = re.sub('[0-9]+\.html', '', filename)
+            modified_string = modified_string.replace('_', ' ')
 
             print(image_src)
             if image_src is not None: 
-                mod_img_src = image_src.replace('../', '')
+                mod_img = image_src.replace('../','')
+                print("Image:" + image_src)
 
-            if image_src and is_valid_image(mod_img_src, base_path = os.path.join(os.path.dirname(folder_path), mod_img_src)):
-                links.add(f'<li><img src="{image_src}" alt="" style="width:100px;height:auto;"><br><a href="{"womens_teams/" + filename}">{modified_string}</a></li>')
+               
+
+            if image_src and is_valid_image(image_src, base_path = os.path.join(os.path.dirname(folder_path), image_src)):
+                links.add(f'<li><a href="{"mens_teams/" + filename}"><img src="{mod_img}" alt="" style="width:100px;height:auto;">{modified_string}</a></li>')
             else: 
                 default = os.path.join(os.path.dirname(folder_path), "/images/profiles/default_image.jpg")
                 links.add(f'<li><a href="{filename}"><img src="{".."+default}" alt="" style="width:100px;height:auto;">{modified_string}</a></li>')
@@ -57,6 +61,7 @@ def generate_homepage(folder_path='mens_team', output_file='mens.html'):
     <title>Men's Team Homepage</title>
 </head>
 <body>
+    <a href = "#main">Skip to Main Content</a>
      <nav>
         <ul>
            <li><a href="index.html">Home Page</a></li>
@@ -64,11 +69,24 @@ def generate_homepage(folder_path='mens_team', output_file='mens.html'):
            <li><a href="womens.html">Women's Team</a></li>
         </ul>
     </nav>
-
+    <main> 
     <h1>Welcome to the Men's Team Homepage</h1>
     <ul id = "all-athletes">
         {}
     </ul>
+
+    <footer>
+        <p>
+        Skyline High School<br>
+        <address>
+        2552 North Maple Road<br>
+        Ann Arbor, MI 48103<br><br>
+
+        <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
+        <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a> 
+
+    </main>
+    </footer>
 </body>
 </html>
     '''.format('\n'.join(sorted_links))
