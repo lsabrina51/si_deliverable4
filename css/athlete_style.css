@@ -56,6 +56,7 @@ h1{
     position: sticky; 
     top: 0; 
     padding: 10px;
+    margin-bottom: 20px;
 
 }
 
@@ -106,7 +107,7 @@ a:hover, #skip:hover{
 footer{
     background-color: lightblue; 
     align-content: center;
-    padding-top: 2em; 
+    padding-top: 20px; 
     padding-bottom: 2em; 
 }
 

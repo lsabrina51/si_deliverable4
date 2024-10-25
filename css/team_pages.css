@@ -67,11 +67,12 @@ img{
 
 #all-athletes li a{
     display: block;  
-      
+
 }
 
 /*footer styling*/ 
 footer{
+    
     background-color: lightblue; 
     align-content: center;
     padding-top: 2em; 
