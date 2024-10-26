@@ -5,6 +5,7 @@ a{
     text-align:center;
 }
 
+
 nav {
     background-color: lightblue;
     width: 100%;
@@ -51,6 +52,7 @@ h1{
     gap: 20px 10px;
     padding: 0;
     justify-content:center; 
+    margin-bottom: 20px;
 }
 
 #all-athletes li{
@@ -72,7 +74,7 @@ img{
 
 /*footer styling*/ 
 footer{
-    
+
     background-color: lightblue; 
     align-content: center;
     padding-top: 2em; 
@@ -125,4 +127,20 @@ footer p, address{
         background-color: darkviolet;
     }
   
+}
+
+@media (prefers-reduced-motion: reduce){
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /*reduce scale*/ 
+    a:hover{
+        scale: 1; 
+    }
+
+    #all-athletes li:hover{
+        animation: none !important; 
+    }
+
 }

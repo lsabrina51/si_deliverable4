@@ -3,6 +3,7 @@ a{
     color: black; 
 }
 
+
  /*Skip to main content styling*/ 
 #skip {
     background-color: lightgrey;
@@ -11,6 +12,7 @@ a{
     display:block; 
     text-align: center;
     transition: color 300ms, background-color 300ms, transform 500ms cubic-bezier(.44, .23, .47, 1.27); 
+    border-bottom: solid; 
 }
 
 /*Icon styling and animation*/ 
@@ -57,8 +59,8 @@ h1{
     top: 0; 
     padding: 10px;
     margin-bottom: 20px;
-    border-top: black; 
-    border-bottom: black; 
+    border-top: solid;  
+    border-bottom: solid; 
 }
 
 h2{
@@ -74,6 +76,7 @@ img{
     margin-right: auto;
     object-fit: cover;
     max-height: 75vh;
+    margin-bottom: 20px; 
 }
 
 /*table styling for both tables*/ 
@@ -90,6 +93,10 @@ img{
 }
 #athlete-sr-table table {
     width: 100vw;
+}
+
+#athlete-sr-table{
+    margin-bottom: 70px;
 }
 /*makes sure alternating row has different colors*/ 
 #athlete-table tr:nth-child(even),#athlete-sr-table tr:nth-child(even)  {
