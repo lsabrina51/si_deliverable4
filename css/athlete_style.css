@@ -177,7 +177,7 @@ footer p, address{
     #athlete-table tr:hover, #athlete-sr-table tr:hover, 
     #athlete-table tr:nth-child(even):hover,
     #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
-        transform: scale(1);
+        font-size: medium !important; 
     }
 
     #skip{

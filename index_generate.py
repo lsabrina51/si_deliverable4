@@ -10,8 +10,10 @@ def generate_index_html(womens_team_dir, mens_team_dir, output_file):
     def add_links_from_directory(directory, team_name, links):
         for filename in os.listdir(directory):
             if filename.endswith('.html'):
-                modified_filename = filename.replace()
-                link = f"<li><a href='{team_name}/{filename}'>{filename}</a></li>"
+                modified_filename = re.sub('[0-9]+\.html', '', filename)
+                modified_filename = modified_filename.replace('_', ' ')
+                
+                link = f"<li><a href='{team_name}/{filename}'>{modified_filename}</a></li>"
                 links.append(link)
 
     # Add links from both directories
@@ -28,12 +30,13 @@ def generate_index_html(womens_team_dir, mens_team_dir, output_file):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    script src="https://kit.fontawesome.com/542a7b699c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/542a7b699c.js" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "css/reset.css">
-    <link rel = "stylesheet" href = "css/team_pages.css">
+    <link rel = "stylesheet" href = "css/index.css">
     <title>Team HTML Files</title>
 </head>
 <body>
+<a href = "#main" id = "skip">Skip to Main Content</a>
 
     <nav>
         <ul>
@@ -43,10 +46,14 @@ def generate_index_html(womens_team_dir, mens_team_dir, output_file):
         </ul>
     </nav>
 
-<main>
-    <h1>Cross Country Athletes Homepage/h1>
+    <header>
+        <div id = "box">
+            <h1>Cross Country Athletes Homepage</h1>
+            <p>Find your favorite athletes below!</p> 
+        </div>
+    </header>
 
-    <p>Find your favorite athletes below!</p> 
+<main>
 
     <h2>Women's Team</h2>
     <ul>

@@ -136,11 +136,12 @@ footer p, address{
 
     /*reduce scale*/ 
     a:hover{
-        scale: 1; 
+        font-size: medium !important; 
     }
 
     #all-athletes li:hover{
         animation: none !important; 
+        font-size: medium !important; 
     }
 
 }
