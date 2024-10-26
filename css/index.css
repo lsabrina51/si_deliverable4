@@ -90,7 +90,7 @@ footer{
     padding-bottom: 2em; 
 }
 
-footer p, address{
+footer a, address{
     margin-left: 20px; 
 }
 
