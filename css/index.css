@@ -74,9 +74,12 @@ header{
 /*List*/
 main ul{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: row;
     margin-bottom: 40px;
+    gap: 5px;
+    justify-content:center; 
+
 }
 
 /*footer styling*/ 
