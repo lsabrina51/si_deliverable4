@@ -4,13 +4,17 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+a:hover, #skip:hover{
     background-color: lightgreen;
     font-size: larger; 
 }
 
 h2{
     margin-bottom: 20px;
+    background-color: lightblue;
+    position: sticky; 
+    top: 0; 
+
 }
 
 

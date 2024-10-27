@@ -170,7 +170,7 @@ footer p, address{
 /*Reduced motion styling*/ 
 @media (prefers-reduced-motion: reduce){
     
-    html {
+    body {
         scroll-behavior: smooth;
     }
 
