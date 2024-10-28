@@ -19,11 +19,11 @@ a{
 .fa-solid.fa-medal{
     color: black; 
     animation-duration: 2s;
-    animation-name: color-change;
+    animation-name: pos-change;
     animation-direction: alternate;
 
 }
-@keyframes color-change{
+@keyframes pos-change{
     0% {
         translate: 150vw 0;
         scale: 200% 1;
@@ -170,9 +170,6 @@ footer p, address{
 /*Reduced motion styling*/ 
 @media (prefers-reduced-motion: reduce){
     
-    body {
-        scroll-behavior: smooth;
-    }
 
     #athlete-table tr:hover, #athlete-sr-table tr:hover, 
     #athlete-table tr:nth-child(even):hover,

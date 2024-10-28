@@ -135,9 +135,7 @@ footer a, address{
 }
 
 @media (prefers-reduced-motion: reduce){
-    html {
-        scroll-behavior: smooth;
-    }
+   
     a:hover, #skip:hover{
         font-size: medium !important; 
 

@@ -130,9 +130,6 @@ footer p, address{
 }
 
 @media (prefers-reduced-motion: reduce){
-    html {
-        scroll-behavior: smooth;
-    }
 
     /*reduce scale*/ 
     a:hover{
