@@ -15,18 +15,24 @@
    </head>
    <body>
    <a href = "#main" id = "skip">Skip to Main Content</a>
-   <nav>
+   <nav id = "nav">
      <ul>
+       <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
         <li><a href="../index.html">Home Page</a></li>
         <li><a href="../mens.html">Men's Team</a></li>
         <li><a href="../womens.html">Women's Team</a></li>
      </ul>
    </nav>
+   
+   <!-- Use any element to open the sidenav -->
+   <div onclick="openNav()" id = "menubtn">Menu</div>
+
    <header>
       <!--Athlete would input headshot-->
        <h1>Alex Nemecek</h1>
       <img src="../images/profiles/18820260.jpg" alt="Athlete headshot" width="200"> 
    </header>
+   
    <main id = "main">
       <section id= "athlete-sr-table">
          <h2><i class = "fa-solid fa-medal"></i> Athlete's Seasonal Records (SR) per Year</h2>
@@ -299,6 +305,18 @@
 
 
                      </footer>
+
+                     <script>
+                        //loads default image for images that do not load
+                        document.querySelectorAll('img').forEach(img => {
+                        img.onerror = function() {
+                           this.onerror = null; // Prevents infinite loop if default image missing
+                           this.src = '../images/default_image.jpg';
+                           this.alt = ""
+                        };
+                        });
+                     </script>
+                     <script src = "../js/action.js"></script>
                </body>
          </html>
    

@@ -3,7 +3,6 @@ a{
     color: black; 
 }
 
-
  /*Skip to main content styling*/ 
 #skip {
     background-color: lightgrey;
@@ -11,8 +10,17 @@ a{
     text-decoration: none; 
     display:block; 
     text-align: center;
-    transition: color 300ms, background-color 300ms, transform 500ms cubic-bezier(.44, .23, .47, 1.27); 
-    border-bottom: solid; 
+    border-bottom: solid;
+    position: absolute; 
+    z-index: 999;
+    left: -9999px;
+    opacity: 0;
+}
+
+#skip:focus{
+    left: 10%; 
+    transform: translateX(-50%);
+    opacity: 1; 
 }
 
 /*Icon styling and animation*/ 
@@ -39,6 +47,7 @@ a{
 nav {
     background-color: lightblue;
     width: 100%;
+    
 }
 nav ul li a {
     display: block;
@@ -50,6 +59,12 @@ nav ul {
     list-style: none;  
     display: flex;
     justify-content: flex-end;
+    padding-inline-start: 0px;
+    width: 100%;
+}
+
+.closebtn, #menubtn{
+    display:none; 
 }
 
 h1{
@@ -91,8 +106,8 @@ img{
     margin-left: 20px;
     margin-right: 10vw; 
 }
-#athlete-sr-table table {
-    width: 100vw;
+ table{
+    width: 100%; 
 }
 
 #athlete-sr-table{
@@ -117,9 +132,10 @@ footer{
     align-content: center;
     padding-top: 20px; 
     padding-bottom: 2em; 
+    
 }
 
-footer p, address{
+footer p, address, footer a{
     margin-left: 20px; 
 }
 
@@ -185,4 +201,86 @@ footer p, address{
         animation: none !important; 
     }
 
+}
+/*tablet mode*/ 
+@media (min-width: 700px){
+    img{
+        border-radius: 10px;
+    }
+     
+    .closebtn{
+        display: block; 
+        position: absolute;
+        top: 0;
+        right: 25px;
+        margin-left: 50px;
+        text-decoration: none;
+    }
+    
+    nav{
+        height: 100%;
+        width: 20vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+        border-right: solid;
+    }
+    
+    nav ul {  
+        display: block;
+    }
+
+    nav li{
+        padding: 8px 8px 8px 32px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    main, header, footer{
+        transition: margin-left .5s;
+        margin-left: 20vw; 
+        width: 78vw; 
+    }
+
+    #menubtn{
+        text-align: center;
+        padding-bottom: 10px; 
+        padding-top: 10px; 
+        font-size: 20px;
+        background-color: lightblue;
+    }
+
+    #menubtn:hover{
+        background-color: lightgreen;
+    }
+
+    footer{
+        display: grid;  
+        grid-template-columns: 10;
+        grid-row: 4;
+    }
+    footer address{
+        grid-column: 3/7; 
+        grid-row: 1/4;  
+        
+    }
+    footer a[href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home"]{
+        grid-column: 7/10;
+        grid-row: 1;  
+    }
+    footer a[href = "https://www.instagram.com/a2skylinexc/"]{
+        grid-column: 7/10;
+        grid-row: 2;  
+    }
+    
+}
+
+/*for desktop mode*/
+@media screen and (min-width: 1000px){
+    /*cannot remove side nav*/ 
+    #menubtn, .closebtn{
+        display: none;
+    }
 }
