@@ -60,13 +60,16 @@ def gen_athlete_page(data, outfile):
    </head>
    <body>
    <a href = "#main" id = "skip">Skip to Main Content</a>
-   <nav>
+   <nav id = "nav">
      <ul>
+         <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
         <li><a href="../index.html">Home Page</a></li>
         <li><a href="../mens.html">Men's Team</a></li>
         <li><a href="../womens.html">Women's Team</a></li>
      </ul>
    </nav>
+   <!-- Use any element to open the sidenav -->
+   <div onclick="openNav()" id = "menubtn">Menu</div>
    <header>
       <!--Athlete would input headshot-->
        <h1>{data["name"]}</h1>
@@ -137,22 +140,20 @@ def gen_athlete_page(data, outfile):
 
                         </table>
                      </section>
-                     <section id = "gallery">
-                     <h2>Gallery</h2>
-                      </section>
+                     
                      </main>
                      <footer>
-                     <p>
-                     Skyline High School<br>
                      <address>
-                     2552 North Maple Road<br>
-                     Ann Arbor, MI 48103<br><br>
+                           Skyline High School<br>
+                           2552 North Maple Road<br>
+                           Ann Arbor, MI 48103<br><br>
+                       </address>
 
                      <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
                      <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a> 
 
-
                      </footer>
+                     <script src = "../js/athlete_style.js"></script>
                </body>
          </html>
    '''
@@ -167,7 +168,7 @@ def main():
    import glob
 
    # Define the folder path
-   folder_path = 'womens_team/'
+   folder_path = 'mens_team/'
    # Get all csv files in the folder
    csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
 
@@ -179,11 +180,11 @@ def main():
    for file in csv_file_names:
 
       # read data from file
-      athlete_data = process_athlete_data("womens_team/"+file)
+      athlete_data = process_athlete_data("mens_team/"+file)
 
       file = file.replace(' ', '_')
       # using data to generate templated athlete page
-      gen_athlete_page(athlete_data, "womens_team/"+file.replace(".csv",".html"))
+      gen_athlete_page(athlete_data, "mens_team/"+file.replace(".csv",".html"))
 
       # read data from file
       # athlete_data2 = process_athlete_data(filename2)
@@ -192,7 +193,7 @@ def main():
 
 
    # Define the folder path
-   folder_path = 'womens_team/'
+   folder_path = 'mens_team/'
    # Get all csv files in the folder
    csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
 
@@ -204,9 +205,9 @@ def main():
    for file in csv_file_names:
 
       # read data from file
-      athlete_data = process_athlete_data("womens_team/"+file)
+      athlete_data = process_athlete_data("mens_team/"+file)
       # using data to generate templated athlete page
-      gen_athlete_page(athlete_data, "womens_team/"+file.replace(".csv",".html"))
+      gen_athlete_page(athlete_data, "mens_team/"+file.replace(".csv",".html"))
 
       # read data from file
       # athlete_data2 = process_athlete_data(filename2)
