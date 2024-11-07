@@ -31,3 +31,12 @@ function openNav() {
 
     document.getElementById("menubtn").style.display= "block";
   }
+
+ //loads default image for images that do not load
+ document.querySelectorAll('img').forEach(img => {
+  img.onerror = function() {
+     this.onerror = null; // Prevents infinite loop if default image missing
+     this.src = '../images/default_image.jpg';
+     this.alt = ""
+  };
+  });

@@ -11,13 +11,16 @@
 <body>
 <a href = "#main" id = "skip">Skip to Main Content</a>
 
-    <nav>
+    <nav id = "nav">
         <ul>
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
            <li><a href="index.html">Home Page</a></li>
            <li><a href="mens.html">Men's Team</a></li>
            <li><a href="womens.html">Women's Team</a></li>
         </ul>
     </nav>
+    <div onclick="openNav()" id = "menubtn">Menu</div>
+
 
     <header>
         <div id = "box">
@@ -28,8 +31,12 @@
 
 <main id = "main">
 
-    <h2>Women's Team</h2>
-    <ul>
+    <div class = "athlete-list">
+        <h2>Women's Team</h2>
+        <button type="button" class="collapsible">Women's Team</button>
+   
+    
+    <ul class = "dropdown=content">
         <li><a href='womens_team/Adrienne_Stewart21142907.html'>Adrienne Stewart</a></li>
 <li><a href='womens_team/Alexandra_Wren21142908.html'>Alexandra Wren</a></li>
 <li><a href='womens_team/Alison_Kauffman23564882.html'>Alison Kauffman</a></li>
@@ -61,9 +68,16 @@
 <li><a href='womens_team/Vera_Naines18895017.html'>Vera Naines</a></li>
 <li><a href='womens_team/Violet_Olley26328683.html'>Violet Olley</a></li>
     </ul>
+</div>
 
-    <h2>Men's Team</h2>
-    <ul>
+<div class = "athlete-list">
+
+  
+        <h2>Men's Team</h2>
+        <button type="button" class="collapsible">Men's Team</button>
+ 
+    
+    <ul class = "dropdown=content">
         <li><a href='mens_team/Alex_Nemecek18820260.html'>Alex Nemecek</a></li>
         <li><a href='mens_team/Amir_Abston25395576.html'>Amir Abston</a></li>
         <li><a href='mens_team/Bruno_Cifaldi21147176.html'>Bruno Cifaldi</a></li>
@@ -107,6 +121,7 @@
         <li><a href='mens_team/William_Johnson23564879.html'>William Johnson</a></li>
         <li><a href='mens_team/Zeke_Lafferty21142917.html'>Zeke Lafferty</a></li>
     </ul>
+</div>
     </main>
 
     <footer>
@@ -121,5 +136,7 @@
         <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
         <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram"></i></a> 
     </footer>
+    <script src = "js/index.js"></script>
+    <script src = "js/athlete_style.js"></script>
 </body>
 </html>
