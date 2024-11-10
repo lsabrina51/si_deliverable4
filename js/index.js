@@ -1,3 +1,4 @@
+//Collapsibles 
 var coll = document.getElementsByClassName("collapsible");
 console.log(coll)
 var i;

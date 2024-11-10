@@ -1,3 +1,4 @@
+//opens side nav 
 function openNav() {
     document.getElementById("nav").style.width = "20vw";
     document.getElementById("nav").style.width = "20vw";
@@ -15,7 +16,8 @@ function openNav() {
     document.getElementById("menubtn").style.display= "none";
   }
   
-  //main, header, #skip, footer
+  //Edits main, header, #skip, footer
+  //Collapses side nav
   function closeNav() {
     document.getElementById("nav").style.width = "0";
     document.querySelector("main").style.marginLeft= "0";
