@@ -38,13 +38,16 @@ def generate_index_html(womens_team_dir, mens_team_dir, output_file):
 <body>
 <a href = "#main" id = "skip">Skip to Main Content</a>
 
-    <nav>
+    <nav id = "nav>
         <ul>
+        <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
            <li><a href="index.html">Home Page</a></li>
            <li><a href="mens.html">Men's Team</a></li>
            <li><a href="womens.html">Women's Team</a></li>
         </ul>
     </nav>
+    <div onclick="openNav()" id = "menubtn">Menu</div>
+
 
     <header>
         <div id = "box">
@@ -53,8 +56,8 @@ def generate_index_html(womens_team_dir, mens_team_dir, output_file):
         </div>
     </header>
 
-<main>
-
+<main id = "main">
+    <div class 
     <h2>Women's Team</h2>
     <ul>
         {}

@@ -3,6 +3,7 @@ a{
     color: black; 
 }
 
+
  /*Skip to main content styling*/ 
 #skip {
     background-color: lightgrey;
@@ -140,69 +141,7 @@ footer p, address, footer a{
     margin-left: 20px; 
 }
 
-/*Dark mode styling: inverts all color*/
-@media(prefers-color-scheme:dark){
-    /*inverts all colors*/
-    body{
-        background-color: 	#212121; 
-        color: white;
-    }
 
-    h1, h2, nav, footer{
-        background-color: black;
-        color: white; 
-        
-    }
-
-    #athlete-table tr:nth-child(even),#athlete-sr-table tr:nth-child(even)  {
-        background-color: #1e1414;
-    }
-
-    a{
-        color: white; 
-        text-decoration: none;
-    }
-
-    #skip{
-        background-color: darkblue;
-    }
-
-    #athlete-table thead, #athlete-sr-table thead{
-        background-color: black;
-    }
-
-    .fa-solid.fa-medal{
-        color: white; 
-    }
-
-    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
-    #athlete-table tr:nth-child(even):hover,
-    #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
-    background-color: rgb(85, 30, 109); 
-    font-size: larger;
-    }
-
-}
-
-/*Reduced motion styling*/ 
-@media (prefers-reduced-motion: reduce){
-    
-
-    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
-    #athlete-table tr:nth-child(even):hover,
-    #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
-        font-size: medium !important; 
-    }
-
-    #skip{
-        transition: none !important; 
-    }
-
-    .fa-solid.fa-medal{
-        animation: none !important; 
-    }
-
-}
 /*tablet mode*/ 
 @media (min-width: 700px){
     img{
@@ -250,7 +189,6 @@ footer p, address, footer a{
         padding-bottom: 10px; 
         padding-top: 10px; 
         font-size: 20px;
-        background-color: lightblue;
     }
 
     #menubtn:hover{
@@ -284,4 +222,90 @@ footer p, address, footer a{
     #menubtn, .closebtn{
         display: none;
     }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        margin-top: 20px; 
+        margin-bottom: 20px;
+        justify-items: center;
+
+    }
+
+    h1{
+        justify-content: center;
+        align-content: center;
+        border: solid;
+        margin: 20px;
+    }
+    
+    img{
+        margin:0; 
+    }
+}
+
+/*Dark mode styling: inverts all color*/
+@media(prefers-color-scheme:dark){
+    /*inverts all colors*/
+    body{
+        background-color: 	#212121; 
+        color: white;
+    }
+
+    h1, h2, nav, footer, #menubtn{
+        background-color: black;
+        color: white; 
+        
+    }
+
+    #athlete-table tr:nth-child(even),#athlete-sr-table tr:nth-child(even)  {
+        background-color: #1e1414;
+    }
+
+    a{
+        color: white; 
+        text-decoration: none;
+    }
+
+    #skip{
+        background-color: darkblue;
+    }
+
+    #athlete-table thead, #athlete-sr-table thead{
+        background-color: black;
+    }
+
+    .fa-solid.fa-medal{
+        color: white; 
+    }
+
+    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
+    #athlete-table tr:nth-child(even):hover,
+    #athlete-sr-table tr:nth-child(even):hover, a:hover, 
+    #skip:hover, #menubtn:hover{
+    background-color: rgb(85, 30, 109); 
+    font-size: larger;
+    }
+
+}
+
+/*Reduced motion styling*/ 
+@media (prefers-reduced-motion: reduce){
+    
+
+    #athlete-table tr:hover, #athlete-sr-table tr:hover, 
+    #athlete-table tr:nth-child(even):hover,
+    #athlete-sr-table tr:nth-child(even):hover, a:hover, #skip:hover{
+        font-size: medium !important; 
+    }
+
+    #skip, main, header, footer{
+        transition: none !important; 
+    }
+
+    .fa-solid.fa-medal{
+        animation: none !important; 
+    }
+
 }

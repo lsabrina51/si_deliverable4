@@ -95,8 +95,21 @@ footer p, address{
     from{scale: 1;}
     to{scale: 1.2; }
 }
-  
-  
+
+/*tablet view**/ 
+@media (min-width: 700px){
+    #all-athletes{
+        grid-template-columns: repeat(5, 100px);
+    }
+
+}
+
+@media (min-width: 1000px){
+    #all-athletes{
+        grid-template-columns: repeat(8, 100px);
+    }
+}
+
 /*Dark Mode*/ 
 @media(prefers-color-scheme:dark){
     body{
@@ -145,18 +158,8 @@ footer p, address{
         font-size: medium !important; 
     }
 
-}
-
-/*tablet view**/ 
-@media (min-width: 700px){
-    #all-athletes{
-        grid-template-columns: repeat(5, 100px);
+    main, header, footer{
+        transition: none !important; 
     }
 
-}
-
-@media (min-width: 1000px){
-    #all-athletes{
-        grid-template-columns: repeat(8, 100px);
-    }
 }

@@ -112,49 +112,6 @@ footer a, address{
     margin-left: 20px; 
 }
 
-@media(prefers-color-scheme:dark){
-    /*inverts all colors*/
-    body{
-        background-color: 	#212121; 
-        color: white;
-    }
-
-    h2, nav, footer{
-        background-color: black;
-        color: white; 
-        
-    }
-
-    a{
-        color: white; 
-    }
-
-    header{
-        background-image: linear-gradient(to bottom, darkblue, black);
-
-    }
-
-    #box{
-        box-shadow:10px 20px darkblue;
-    }
-
-    a:hover, #skip:hover{
-        background-color: darkviolet; 
-    }
-
-    #skip{
-        background-color: darkblue;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce){
-   
-    a:hover, #skip:hover{
-        font-size: medium !important; 
-
-    }
-}
 
 @media (min-width: 700px){
     main{
@@ -222,6 +179,8 @@ footer a, address{
     
     nav ul {  
         display: block;
+        padding-inline-start: 0px;
+
     }
 
     nav li{
@@ -274,6 +233,54 @@ footer a, address{
      /*cannot remove side nav*/ 
      #menubtn, .closebtn{
         display: none;
+    }
+}
+
+@media(prefers-color-scheme:dark){
+    /*inverts all colors*/
+    body{
+        background-color: 	#212121; 
+        color: white;
+    }
+
+    h2, nav, footer{
+        background-color: black;
+        color: white; 
+        
+    }
+
+    a, .collapsible{
+        color: white; 
+    }
+
+    header{
+        background-image: linear-gradient(to bottom, darkblue, black);
+
+    }
+
+    #box{
+        box-shadow:10px 20px darkblue;
+    }
+
+    a:hover, #skip:hover, .collapsible:hover, #menubtn:hover{
+        background-color: darkviolet; 
+    }
+
+    #skip, .collapsible, #menubtn{
+        background-color: darkblue;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+   
+    a:hover, #skip:hover{
+        font-size: medium !important; 
+
+    }
+
+    main, header, footer{
+        transition:none !important; 
     }
 }
 
